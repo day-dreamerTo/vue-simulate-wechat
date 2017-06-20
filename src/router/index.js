@@ -1,15 +1,40 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import Vue from 'vue';
+import Router from 'vue-router';
 
-Vue.use(Router)
+Vue.use(Router);
 
+const routes = [{
+  path: '/',
+  name: '微信',
+  component: require('../components/wechat/wechat.vue')
+}, {
+  path: '/wechat/dialog',
+  name: '',
+  components: {
+    'default': require('../components/wechat/wechat.vue'),
+    'subPage': require('../components/wechat/dialogue.vue')
+  }
+}, {
+  path: '/wechat/dialogue/dialogue-info',
+  name: '',
+  components: {
+    subPage: require('../components/wechat/dialogue-info.vue')
+  }
+}, {
+  path: '/wechat/dialogue/dialogue-detail',
+  name: '',
+  components: {
+    subPage: require('../components/wechat/dialogue-detail.vue')
+  }
+}];
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Hello',
-      component: Hello
-    }
-  ]
-})
+  base: '/',
+  routes
+  // scrollBehavior(to, from, savedPosition) {
+  //     if (savedPosition) {
+  //         return savedPosition
+  //     } else {
+  //         return { x: 0, y: 0 }
+  //     }
+  // }
+});

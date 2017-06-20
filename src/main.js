@@ -1,15 +1,25 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
-import router from './router'
+import Vue from 'vue';
+import axios from 'axios';
+import VueAxions from 'vue-axios'; // 必须按照 vue, axios, vue-axios的加载顺序
+import Vuex from 'vuex';
+import App from './App';
+import router from './router';
+import store from './vuex/store';
+import FastClick from 'fastclick';
+import filters from './filters';
 
-Vue.config.productionTip = false
+Vue.use(VueAxions, axios, Vuex);
 
-/* eslint-disable no-new */
+filters(Vue);// 注册自定义过滤器
+
+Vue.config.productionTip = true;// 将此值设置为 false ,会关闭 Vue 启动时的提示信息，推荐
+
+FastClick.attach(document.body);
+
+/* eslint-disable no-new */ // 跳过校验
 new Vue({
   el: '#app',
   router,
-  template: '<App/>',
-  components: { App }
-})
+  store,
+  render: h => h(App)
+});
