@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "shelljs": "^0.7.8",
     "vue": "^2.1.10",
     "vue-router": "^2.2.0"
   },
@@ -36,6 +37,7 @@
     "cross-env": "^3.1.4",
     "cross-spawn": "^5.0.1",
     "css-loader": "^0.26.1",
+    "eslint-friendly-formatter": "^3.0.0",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
