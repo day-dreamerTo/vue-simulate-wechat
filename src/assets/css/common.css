@@ -125,7 +125,7 @@ body {
 .new-msg-dot {
     position: absolute;
     right: -4px;
-    top: -3px;
+    top: 4px;
     width: 10px;
     height: 10px;
     z-index: 2;
