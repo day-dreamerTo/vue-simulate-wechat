@@ -6,8 +6,7 @@
       <header class="app-header" :class="{'header-hide':!$store.state.headerStatus}">
         <wx-header :pageName="pageName"></wx-header>
       </header>
-      <!--搜索框只在微信和通讯录页面下显示-->
-      <search v-show="$route.path.indexOf('explore') === -1 && $route.path.indexOf('selt') === -1"></search>
+      <search v-show="$route.path.indexOf('explore') === -1 && $route.path.indexOf('self') === -1"></search>
       <section class="app-content">
         <keep-alive>
           <router-view name="default"></router-view>
@@ -23,8 +22,9 @@
 <script>
   import welcome from './components/common/welcome';
   import wxHeader from './components/common/wx-header';
-  import search from './components/common/search';
   import wxNav from './components/common/wx-nav';
+  import search from './components/common/search';
+  import wechat from './components/wechat/wechat';
   export default {
     data() {
       return {
@@ -34,8 +34,9 @@
     components: {
       welcome,
       wxHeader,
+      wxNav,
       search,
-      wxNav
+      wechat
     }
   };
 </script>

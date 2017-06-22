@@ -53,7 +53,7 @@
         width: 28px
         height: 28px
         margin: 0 auto
-        margin-bottom: 2px
+        margin-bottom: 5px
         color: #797979
         font-size: 28px
       dd
