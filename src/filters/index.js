@@ -2,7 +2,8 @@
  * Created by admin on 17/6/20.
  */
 const filters = {
-  fmtDate: function (date, fmt) {
+  fmtDate: function (date1, fmt) {
+    var date = new Date(date1);
     if (/(y+)/.test(fmt)) {
       // RegExp.$1 匹配到的对象
       // date.getFullYear() + '' 转换为字符串
@@ -14,7 +15,9 @@ const filters = {
       'd+': date.getDate(),
       'h+': date.getHours(),
       'm+': date.getMinutes(),
-      's+': date.getSeconds()
+      's+': date.getSeconds(),
+      "q+": Math.floor((date.getMonth() + 3) / 3), //季度
+      "S": date.getMilliseconds() //毫秒
     };
     for (let k in o) {
       if (new RegExp(`(${k})`).test(fmt)) {
@@ -23,6 +26,7 @@ const filters = {
         fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? str : padLeftZero(str));
       }
     }
+    return fmt;
   }
 };
 function padLeftZero(str) {

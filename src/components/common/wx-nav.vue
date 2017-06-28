@@ -33,15 +33,18 @@
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
   #wx-nav nav
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex
     width: 100%
     height: 50px
-    /*padding-top: 8px*/
+    padding-top: 8px
     overflow: hidden
     background: #f9f9f9
     font-size: 12px
     dl
       flex: 1
+      line-height: 1;
       cursor: pointer
       user-select: none
       text-align: center
@@ -53,11 +56,13 @@
         width: 28px
         height: 28px
         margin: 0 auto
-        margin-bottom: 5px
+        margin-bottom: 2px
         color: #797979
         font-size: 28px
       dd
+        color: #929292
+        -webkit-transform-origin: 50% 0
         transform-origin: 50% 0
-        transform: scale(0.9)
+        -webkit-transform: scale(0.9)
         color: #929292
 </style>

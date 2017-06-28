@@ -108,7 +108,7 @@ body {
     font-style: normal;
     font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica;
     right: -9px;
-    top: -5px;
+    top: -4px;
     z-index: 2;
     padding: 0 4px;
     width: auto;
@@ -125,7 +125,7 @@ body {
 .new-msg-dot {
     position: absolute;
     right: -4px;
-    top: 4px;
+    top: -4px;
     width: 10px;
     height: 10px;
     z-index: 2;
@@ -150,12 +150,12 @@ body {
     z-index: 5;
 }
 
-.line-bottom:not(:first-child)::before {
+.line-bottom::after {
     content: "";
     position: absolute;
     width: 200%;
     left: 8px;
-    top: 0;
+    bottom: 0;
     transform: scale(.5);
     transform-origin: 0 0;
     -webkit-transform: scale(.5);

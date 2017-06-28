@@ -5,10 +5,10 @@ Vue.use(Router);
 
 const routes = [{
   path: '/',
-  name: '微信',
+  name: '',
   component: require('../components/wechat/wechat.vue')
 }, {
-  path: '/wechat/dialog',
+  path: '/wechat/dialogue',
   name: '',
   components: {
     'default': require('../components/wechat/wechat.vue'),
