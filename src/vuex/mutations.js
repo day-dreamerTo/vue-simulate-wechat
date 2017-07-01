@@ -4,7 +4,7 @@
 const mutations = {
   // 切换微信页右上角菜单
   toggleTipsStatus(state, status) {
-    if (status === 1) {
+    if (status === -1) {
       state.tipsStatus = false;
     } else {
       state.tipsStatus = !state.tipsStatus;
@@ -21,6 +21,10 @@ const mutations = {
   // 减少未读消息数
   minusNewMsg(state) {
     state.newMsgCount < 1 ? state.newMsgCount = 0 : state.newMsgCount--;
+  },
+  //设置当前页面名字
+  setPageName(state, name) {
+      state.currentPageName = name;
   }
 };
 export default mutations;

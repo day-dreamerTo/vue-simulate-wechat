@@ -4,6 +4,10 @@
       <!--在"微信"页面显示'+'-->
       <span class="iconfont icon-tips-jia" v-show="$route.path === '/'"
             @click="$store.commit('toggleTipsStatus')"></span>
+      <!-- 在通讯录页显示添加好友图标       -->
+      <router-link v-show="$route.path==='/contact'" tag="span" to="/contact/add-friend" class="iconfont icon-tips-add-friend" ></router-link>
+      <!-- 在添加朋友页显示 -->
+      <span v-show="$route.path==='/contact/new-friends'">Add Contacts</span>
       <ul class="tips-menu" :class="[$store.state.tipsStatus?'tips-open':'tips-close']"
           @click="$store.commit('toggleTipsStatus',-1)">
         <li>

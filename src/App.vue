@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <welcome></welcome>
-    <div class="outer">
+    <div class="outer" :class="{'hideLeft':$route.path.split('/').length > 2}">
       <!--头部-->
       <header class="app-header" :class="{'header-hide':!$store.state.headerStatus}">
         <wx-header :pageName="pageName"></wx-header>
@@ -18,7 +18,7 @@
       </footer>
     </div>
     <!--当有二级页面或更深层级时显示-->
-    <transition name="custom-classes-transition" :enter-active-class="enterAnimate" :leave-active-class="leaveAnimate" :duration="3000">
+    <transition name="custom-classes-transition" :enter-active-class="enterAnimate" :leave-active-class="leaveAnimate">
       <router-view name="subPage" class="sub-page"></router-view>
     </transition>
   </div>

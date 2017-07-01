@@ -14,7 +14,7 @@
  */
 const contacts = [{ //昵称备注都有的朋友
   "wxid": "wxid_zhaohd",
-  "initial": 'z',
+  "initial": 'a',
   "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png",
   "nickname": "阿荡",
   "sex": 1,
