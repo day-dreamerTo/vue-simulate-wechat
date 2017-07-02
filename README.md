@@ -19,3 +19,8 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+### dome地址
+https://day-dreamerto.github.io/vue-simulate-wechat/index.html
+### 原文链接
+https://github.com/zhaohaodang/vue-WeChat
