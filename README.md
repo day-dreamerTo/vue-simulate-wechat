@@ -22,5 +22,3 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ### dome地址
 https://day-dreamerto.github.io/vue-simulate-wechat/index.html
-### 原文链接
-https://github.com/zhaohaodang/vue-WeChat
